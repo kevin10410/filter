@@ -19,7 +19,7 @@ export const store = new Vuex.Store({
             return state.display
         },
         currentSites: state => {
-            if (state.currentSites.length === 0) {
+            if (state.rules.length === 0) {
                 return state.allSites.slice(3 * state.currentPage - 3, 3 * state.currentPage)
             } else {
                 return state.currentSites.slice(3 * state.currentPage - 3, 3 * state.currentPage)

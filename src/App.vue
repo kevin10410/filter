@@ -99,8 +99,9 @@ export default {
     getDisplay() {
       console.log(this.$store.state.display);
     },
-    addRule() {
-      if (this.filter !== "") {
+    addRule(event) {
+      console.log(event.keyCode)
+      if (event.keyCode === 13 && this.filter !== "") {
         this.$store.commit("addRules", this.filter)
         this.filter = "";
       }

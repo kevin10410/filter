@@ -64,7 +64,7 @@ export default {
       }
     },
     nextPage() {
-      if (this.getFilterSites.length === 0) {
+      if (this.currentRules.length === 0) {
         if (this.currentPage < 89) {
           this.$store.commit("changePage", this.currentPage + 1);
           if (this.currentPage % 5 === 1) {
